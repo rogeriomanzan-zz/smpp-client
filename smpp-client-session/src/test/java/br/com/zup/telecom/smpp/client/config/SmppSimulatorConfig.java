@@ -1,4 +1,4 @@
-package br.com.zup.telecom.smpp.client.ws.controller.configIntegrationTest;
+package br.com.zup.telecom.smpp.client.config;
 
 import java.io.IOException;
 
@@ -37,7 +37,7 @@ public class SmppSimulatorConfig {
 	 * OBS: must have the same value as the property 'smsc-gw.port' in application.properties.
 	 */
 	static int port = 19510;
-	
+
 	/**
 	 * Directory for creating of debug and event files.
 	 */

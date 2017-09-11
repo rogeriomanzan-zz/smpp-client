@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
  * Response to use in return {@link SmppClientSession}.
  * 
  * @author Rogério M. Manzan
- *
  */
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class SmppClientSessionResponse {

@@ -1,5 +1,11 @@
 package br.com.zup.telecom.smpp.client.session;
 
+/**
+ * {@code SmppClientSessionException} is the class of exceptions that can be thrown 
+ * during operation of the {@link SmppClientSession}.
+ * 
+ * @author Rogério M. Manzan
+ */
 public class SmppClientSessionException extends RuntimeException {
 
 	private static final long serialVersionUID = 1040972200198422599L;

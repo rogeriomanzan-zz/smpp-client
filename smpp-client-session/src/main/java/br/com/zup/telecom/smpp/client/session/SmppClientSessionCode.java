@@ -1,5 +1,10 @@
 package br.com.zup.telecom.smpp.client.session;
 
+/**
+ * Code to identify return {@link SmppClientSession}.
+ * 
+ * @author Rogério M. Manzan
+ */
 public enum SmppClientSessionCode {
 
 	CONNECTION_REFUSED("smpp.connection.refused"),
@@ -17,6 +22,11 @@ public enum SmppClientSessionCode {
 		this.code = code;
 	}
 	
+	/**
+	 * code to identify the execution result in {@link SmppClientSession#submitShortMessage}.
+	 * 
+	 * @return
+	 */
 	public String code() {
 		return this.code;
 	}
