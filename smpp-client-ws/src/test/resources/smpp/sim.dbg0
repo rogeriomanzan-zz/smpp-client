@@ -1,0 +1,131 @@
+09:46:19 main: main() trace group 3 deactivated
+09:46:19 main: main() trace group 6 deactivated
+09:46:19 main: main() trace group 8 deactivated
+09:46:19 main: main() trace group 18 deactivated
+09:46:19 main: main() simulator started
+09:46:19    main: DeliveryInfoSender.start() entered
+09:46:19    DlvrInfoSender-1: DeliveryInfoSender.run() entered
+09:46:19    main: DeliveryInfoSender.start() exited
+09:46:19    main: main() going to parse from input stream
+09:46:19    main: main() got empty line
+09:46:19    main: main() got comment line # APIGWRJ SMSC 
+09:46:19    main: main() going to parse attribute name=APIGWRJ
+09:46:19    main: main() going to parse attribute password=SECRET01
+09:46:19    main: main() going to parse attribute timeout=3
+09:46:19    main: main() got empty line
+09:46:19    main: main() finished record, adding to table
+09:46:19    main: main() got comment line # APIGWSP SMSC
+09:46:19    main: main() going to parse attribute name=APIGWSP
+09:46:19    main: main() going to parse attribute password=SECRET01
+09:46:19    main: main() going to parse attribute timeout=3
+09:46:19    main: main() finished record, adding to table
+09:46:19    main: main() going to start SMSCListener on port 19510
+09:46:19       main: TCPIPConnection.open entered
+09:46:19       main: TCPIPConnection.open listening tcp/ip on port 19510 (7)
+09:46:19       main: TCPIPConnection.open exited
+09:46:19    main: main() starting listener in separate thread.
+09:46:19    main: main() listener started in separate thread.
+09:46:19    Thread-5: SMSCListenerImpl.run of SMSCListener on port 19510 entered
+09:46:19    Thread-5: SMSCListenerImpl.run of SMSCListener on port 19510 SMSCListener accepted a connection on port 19510
+09:46:19    Thread-5: SMSCListenerImpl.run of SMSCListener on port 19510 SMSCListener launched a session on the accepted connection.
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() entered
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession starting receiver
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() Receiver starting (1)
+09:46:19       Thread-6: Receiver.start() entered
+09:46:19    Receiver-1: Receiver.run() entered
+09:46:19       Thread-6: Receiver.start() exited
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() Receiver started (1)
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession going to receive a PDU
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() receivePDU: Going to receive response. (1)
+09:46:19    Receiver-1: Receiver.run() totally read 44 bytes from socket (7)
+09:46:19    Receiver-1: Receiver.run() trying to create pdu from unprocessed buffer (1)
+09:46:19    Receiver-1: Receiver.run() PDU.setData() parsing header 0000002c000000020000000000000001 (5)
+09:46:19    Receiver-1: Receiver.run() PDU.setData() parsing body 4150494757524a00534543524554303100464c455853500034000000 (5)
+09:46:19    Receiver-1: Receiver.run() received complete pdu(bindreq: (pdu: 44 2 0 1) APIGWRJ SECRET01 FLEXSP 52 (addrrang: 0 0 ) )  (1)
+09:46:19    Receiver-1: Receiver.run() there is 0 bytes left in unprocessed buffer (1)
+09:46:19    Receiver-1: Receiver.run() Receiver.receiveAsync(): PDU received, processing (bindreq: (pdu: 44 2 0 1) APIGWRJ SECRET01 FLEXSP 52 (addrrang: 0 0 ) )  (1)
+09:46:19    Receiver-1: Receiver.run() receiver enqueuing pdu. (1)
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() Got pdu (bindreq: (pdu: 44 2 0 1) APIGWRJ SECRET01 FLEXSP 52 (addrrang: 0 0 ) )  (1)
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession got request (bindreq: (pdu: 44 2 0 1) APIGWRJ SECRET01 FLEXSP 52 (addrrang: 0 0 ) ) 
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SimulatorPDUProcessor.clientRequest() (bindreq: (pdu: 44 2 0 1) APIGWRJ SECRET01 FLEXSP 52 (addrrang: 0 0 ) ) 
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() system id APIGWRJ authenticated
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SimulatorPDUProcessor.serverResponse() (bindresp: (pdu: 0 80000002 0 1) Smsc Simulator) 
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession going to send pdu over transmitter
+09:46:19       Thread-6: Transmitter.send entered
+09:46:19       Thread-6: Transmitter.send going to send pdu's data over connection (7)
+09:46:19       Thread-6: Transmitter.send PDU.getData() build up data 0000001f800000020000000000000001536d73632053696d756c61746f7200 (5)
+09:46:19          Thread-6: TCPIPConnection.send entered
+09:46:19          Thread-6: TCPIPConnection.send sent 31 bytes to 127.0.0.1 on port 32972 (7)
+09:46:19          Thread-6: TCPIPConnection.send exited
+09:46:19       Thread-6: Transmitter.send successfully sent pdu's data over connection (7)
+09:46:19       Thread-6: Transmitter.send exited
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession pdu sent over transmitter
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession going to receive a PDU
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() receivePDU: Going to receive response. (1)
+09:46:19    Receiver-1: Receiver.run() totally read 73 bytes from socket (7)
+09:46:19    Receiver-1: Receiver.run() trying to create pdu from unprocessed buffer (1)
+09:46:19    Receiver-1: Receiver.run() PDU.setData() parsing header 00000049000000040000000000000002 (5)
+09:46:19    Receiver-1: Receiver.run() PDU.setData() parsing body 000100313631360001003132333435363738000000013137303931303231343631393531322d0000000011000c4d6573736167652054657374 (5)
+09:46:19    Receiver-1: Receiver.run() received complete pdu(submit: (pdu: 73 4 0 2) (addr: 1 0 1616)  (addr: 1 0 12345678)  (sm: msg: Message Test)  (opt: ) )  (1)
+09:46:19    Receiver-1: Receiver.run() there is 0 bytes left in unprocessed buffer (1)
+09:46:19    Receiver-1: Receiver.run() Receiver.receiveAsync(): PDU received, processing (submit: (pdu: 73 4 0 2) (addr: 1 0 1616)  (addr: 1 0 12345678)  (sm: msg: Message Test)  (opt: ) )  (1)
+09:46:19    Receiver-1: Receiver.run() receiver enqueuing pdu. (1)
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() Got pdu (submit: (pdu: 73 4 0 2) (addr: 1 0 1616)  (addr: 1 0 12345678)  (sm: msg: Message Test)  (opt: ) )  (1)
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession got request (submit: (pdu: 73 4 0 2) (addr: 1 0 1616)  (addr: 1 0 12345678)  (sm: msg: Message Test)  (opt: ) ) 
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SimulatorPDUProcessor.clientRequest() (submit: (pdu: 73 4 0 2) (addr: 1 0 1616)  (addr: 1 0 12345678)  (sm: msg: Message Test)  (opt: ) ) 
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SimulatorPDUProcessor.serverResponse() (submit_resp: (pdu: 0 80000004 0 2) Smsc2001 ) 
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession going to send pdu over transmitter
+09:46:19       Thread-6: Transmitter.send entered
+09:46:19       Thread-6: Transmitter.send going to send pdu's data over connection (7)
+09:46:19       Thread-6: Transmitter.send PDU.getData() build up data 00000019800000040000000000000002536d73633230303100 (5)
+09:46:19          Thread-6: TCPIPConnection.send entered
+09:46:19          Thread-6: TCPIPConnection.send sent 25 bytes to 127.0.0.1 on port 32972 (7)
+09:46:19          Thread-6: TCPIPConnection.send exited
+09:46:19       Thread-6: Transmitter.send successfully sent pdu's data over connection (7)
+09:46:19       Thread-6: Transmitter.send exited
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession pdu sent over transmitter
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession going to receive a PDU
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() receivePDU: Going to receive response. (1)
+09:46:19    Receiver-1: Receiver.run() totally read 16 bytes from socket (7)
+09:46:19    Receiver-1: Receiver.run() trying to create pdu from unprocessed buffer (1)
+09:46:19    Receiver-1: Receiver.run() PDU.setData() parsing header 00000010000000060000000000000003 (5)
+09:46:19    Receiver-1: Receiver.run() PDU.setData() no data for body (5)
+09:46:19    Receiver-1: Receiver.run() received complete pdu(unbind: (pdu: 16 6 0 3) )  (1)
+09:46:19    Receiver-1: Receiver.run() there is 0 bytes left in unprocessed buffer (1)
+09:46:19    Receiver-1: Receiver.run() Receiver.receiveAsync(): PDU received, processing (unbind: (pdu: 16 6 0 3) )  (1)
+09:46:19    Receiver-1: Receiver.run() receiver enqueuing pdu. (1)
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() Got pdu (unbind: (pdu: 16 6 0 3) )  (1)
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession got request (unbind: (pdu: 16 6 0 3) ) 
+09:46:19    Thread-6: SMSCSessionImpl.SMSCSession run() SimulatorPDUProcessor.clientRequest() (unbind: (pdu: 16 6 0 3) ) 
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() SimulatorPDUProcessor.serverResponse() (unbind_resp: (pdu: 0 80000006 0 3) ) 
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession going to send pdu over transmitter
+09:46:20       Thread-6: Transmitter.send entered
+09:46:20       Thread-6: Transmitter.send going to send pdu's data over connection (7)
+09:46:20       Thread-6: Transmitter.send PDU.getData() build up data 00000010800000060000000000000003 (5)
+09:46:20          Thread-6: TCPIPConnection.send entered
+09:46:20          Thread-6: TCPIPConnection.send sent 16 bytes to 127.0.0.1 on port 32972 (7)
+09:46:20          Thread-6: TCPIPConnection.send exited
+09:46:20       Thread-6: Transmitter.send successfully sent pdu's data over connection (7)
+09:46:20       Thread-6: Transmitter.send exited
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession pdu sent over transmitter
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession stopping
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession stopping receiver
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() Receiver stoping (1)
+09:46:20       Thread-6: Receiver.stop() entered
+09:46:20       Receiver-1: TCPIPConnection.close entered
+09:46:20       Receiver-1: TCPIPConnection.close closed client tcp/ip connection to 127.0.0.1 on port 32972 (7)
+09:46:20       Receiver-1: TCPIPConnection.close exited
+09:46:20    Receiver-1: Receiver.run() IOException: Reached end of stream
+09:46:20       Receiver-1: TCPIPConnection.close entered
+09:46:20       Receiver-1: TCPIPConnection.close closed client tcp/ip connection to 127.0.0.1 on port 32972 (7)
+09:46:20       Receiver-1: TCPIPConnection.close exited
+09:46:20    Receiver-1: Receiver.run() exited
+09:46:20       Thread-6: Receiver.stop() exited
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() Receiver stoped (1)
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession exiting PDUProcessor
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession closing connection
+09:46:20       Thread-6: TCPIPConnection.close entered
+09:46:20       Thread-6: TCPIPConnection.close closed client tcp/ip connection to 127.0.0.1 on port 32972 (7)
+09:46:20       Thread-6: TCPIPConnection.close exited
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() SMSCSession exiting run()
+09:46:20    Thread-6: SMSCSessionImpl.SMSCSession run() exited
